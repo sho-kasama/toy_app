@@ -10,5 +10,10 @@
   <%= @user.email %>
 </p>
 
++<p>
++  <strong>Image:</strong>
++  <%= image_tag(@user.image_url) if @user.image.present? %>
++</p>
+
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
